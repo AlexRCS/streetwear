@@ -7,30 +7,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
         integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
     <title>e-shop</title>
 </head>
 
 <body>
     <header>
         <h1>E-Shop</h1>
-        <button><i class="fa-solid fa-palette"></i>Dark Mode</button> <!--criar alteração para modo claro-->
+        <div>
+            <i class="fa-solid fa-palette"></i>
+            <select>
+                <option value="ligth">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div> <!--criar alteração para modo claro/escruro-->
         <ul>
-            <li class="header-nav"><i class="fa-solid fa-right-to-bracket"></i>Login</li>
+            <li class="header-nav"><button class="nav-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            </li>
             <!--criar alteração para perfil pós logado-->
-            <li class="header-nav"><i class="fa-solid fa-cart-shopping"></i>Cart</li>
+            <li class="header-nav">
+                <button class="user-btn"><i class="fa-solid fa-user"></i> Profile</button>
+                <div class="user-select">
+                    <ul class="user-options">
+                        <li><button class="user-item"><i class="fa-solid fa-user"></i> Configurations</button></li>
+                        <li><button class="user-item"><i class="fa-solid fa-user"></i> Costumer Service</button></li>
+                        <li><button class="user-item"><i class="fa-solid fa-right-to-bracket fa-flip-horizontal"></i>Logout</button></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header-nav"><button class="nav-btn"><i class="fa-solid fa-cart-shopping"></i>Cart</button></li>
             <!--não permitir finalizar sem logar-->
-            <li class="header-nav"><i class="fa-solid fa-phone"></i>Costumer Services</li>
-            <li class="header-nav"><i class="fa-solid fa-gear"></i>Configurations</li>
         </ul>
+
+        <div class="search-bar">
+            <input class="search-line" type="search" placeholder="search">
+            <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
     </header>
     <nav>
-        <button class="nav-btn">buttonTeste</button>
-        <button class="nav-btn">buttonTeste</button>
-        <button class="nav-btn">buttonTeste</button>
-        <button class="nav-btn">buttonTeste</button>
-        <button class="nav-btn">buttonTeste</button>
+        <button class="nav-options">buttonTeste</button>
+        <button class="nav-options">buttonTeste</button>
+        <button class="nav-options">buttonTeste</button>
+        <button class="nav-options">buttonTeste</button>
+        <button class="nav-options">buttonTeste</button>
     </nav>
     <main>
         <section class="banner-carousel">
@@ -49,14 +67,15 @@
             <div class="main-product" id="2">
                 <img src="./src/images/mainProducts/2.png" alt="main-product 2">
                 <h2 class="main-product-name">Product name</h2>
-                <h3 class="main-product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> 
+                <h3 class="main-product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
                 <button class="main-products-order">Order now</button>
             </div>
         </section>
 
         <section class="products">
             <container class="product-box" id="product-1">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images" width="250px">
+                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images"
+                    width="250px">
                 <div class="product-content">
                     <button class="favorite"><i class="fa-solid fa-star"></i></button>
                     <h1 class="product-name">Product Name</h1>
@@ -69,7 +88,8 @@
             </container>
 
             <container class="product-box" id="product-2">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images" width="250px">
+                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images"
+                    width="250px">
                 <div class="product-content">
                     <button class="favorite"><i class="fa-solid fa-star"></i></button>
                     <h1 class="product-name">Product Name</h1>
@@ -82,7 +102,8 @@
             </container>
 
             <container class="product-box" id="product-3">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images" width="250px">
+                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images"
+                    width="250px">
                 <div class="product-content">
                     <button class="favorite"><i class="fa-solid fa-star"></i></button>
                     <h1 class="product-name">Product Name</h1>
@@ -95,7 +116,8 @@
             </container>
 
             <container class="product-box" id="product-4">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images" width="250px">
+                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images"
+                    width="250px">
                 <div class="product-content">
                     <button class="favorite"><i class="fa-solid fa-star"></i></button>
                     <h1 class="product-name">Product Name</h1>
@@ -108,7 +130,8 @@
             </container>
 
             <container class="product-box" id="product-5">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images" width="250px">
+                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images"
+                    width="250px">
                 <div class="product-content">
                     <button class="favorite"><i class="fa-solid fa-star"></i></button>
                     <h1 class="product-name">Product Name</h1>
@@ -121,7 +144,8 @@
             </container>
 
             <container class="product-box" id="product-6">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images" width="250px">
+                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images"
+                    width="250px">
                 <div class="product-content">
                     <button class="favorite"><i class="fa-solid fa-star"></i></button>
                     <h1 class="product-name">Product Name</h1>
@@ -136,7 +160,24 @@
 
     </main>
     <footer>
-
+        <div class="footer-nav">
+            <ul class="footer-list">
+                <li class="footer-item"><a href="">item</a></li>
+                <li class="footer-item"><a href="">item</a></li>
+                <li class="footer-item"><a href="">item</a></li>
+                <li class="footer-item"><a href="">item</a></li>
+                <li class="footer-item"><a href="">item</a></li>
+            </ul>
+        </div>
+        <article>
+            site experimental realizado com HTML CSS3 JavaScript
+        </article>
+        <ul class="Social-media">
+            <li class="media-icon"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="media-icon"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="media-icon"><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+            <li class="media-icon"><a href=""><i class="fa-brands fa-github"></i></a></li>
+        </ul>
     </footer>
 </body>
 
