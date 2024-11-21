@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
         integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>e-shop</title>
+    <link rel="stylesheet" href="./src/Style/mainStyle.css">
+    <link rel="stylesheet" href="./src/Style/reset.css">
+    <link rel="stylesheet" href="./src/Style/mainHeader.css">
+    <title>Streetwear-shop</title>
 </head>
 
 <body>
     <header>
-        <h1>E-Shop</h1>
-        <div>
+        <h1>Streetwear-shop</h1>
+        <div class="color-mode">
             <i class="fa-solid fa-palette"></i>
             <select>
+                <!--criar alteração para modo claro/escruro-->
                 <option value="ligth">Light</option>
                 <option value="dark">Dark</option>
             </select>
-        </div> <!--criar alteração para modo claro/escruro-->
-        <ul>
+        </div> 
+        <ul class="side-navigation">
             <li class="header-nav"><button class="nav-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
             </li>
             <!--criar alteração para perfil pós logado-->
@@ -30,7 +34,8 @@
                     <ul class="user-options">
                         <li><button class="user-item"><i class="fa-solid fa-user"></i> Configurations</button></li>
                         <li><button class="user-item"><i class="fa-solid fa-user"></i> Costumer Service</button></li>
-                        <li><button class="user-item"><i class="fa-solid fa-right-to-bracket fa-flip-horizontal"></i>Logout</button></li>
+                        <li><button class="user-item"><i
+                                    class="fa-solid fa-right-to-bracket fa-flip-horizontal"></i>Logout</button></li>
                     </ul>
                 </div>
             </li>
