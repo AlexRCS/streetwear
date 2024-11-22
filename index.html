@@ -15,34 +15,47 @@
 
 <body>
     <header>
-        <h1>Streetwear-shop</h1>
-        <div class="color-mode">
-            <i class="fa-solid fa-palette"></i>
-            <select>
-                <!--criar alteração para modo claro/escruro-->
-                <option value="ligth">Light</option>
-                <option value="dark">Dark</option>
-            </select>
-        </div> 
-        <ul class="side-navigation">
-            <li class="header-nav"><button class="nav-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
-            </li>
-            <!--criar alteração para perfil pós logado-->
-            <li class="header-nav">
-                <button class="user-btn"><i class="fa-solid fa-user"></i> Profile</button>
-                <div class="user-select">
-                    <ul class="user-options">
-                        <li><button class="user-item"><i class="fa-solid fa-user"></i> Configurations</button></li>
-                        <li><button class="user-item"><i class="fa-solid fa-user"></i> Costumer Service</button></li>
-                        <li><button class="user-item"><i
-                                    class="fa-solid fa-right-to-bracket fa-flip-horizontal"></i>Logout</button></li>
-                    </ul>
+        <section class="header-top">
+            <h1>Streetwear-shop</h1>
+            <div class="side-user-options">
+                <div class="color-mode">
+                    <i class="fa-solid fa-palette"></i>
+                    <select>
+                        <!--criar alteração para modo claro/escruro-->
+                        <option value="ligth">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
                 </div>
-            </li>
-            <li class="header-nav"><button class="nav-btn"><i class="fa-solid fa-cart-shopping"></i>Cart</button></li>
-            <!--não permitir finalizar sem logar-->
-        </ul>
+                <ul class="side-navigation">
+                    <div class="main-options">
+                        <li class="header-nav"><button class="nav-btn"><i class="fa-solid fa-cart-shopping"></i> <i
+                                    class="fa-solid fa-sort-down"></i></button>
+                        </li><!--não permitir finalizar sem logar-->
 
+                        <li class="header-nav"><button class="profile-btn"><i class="fa-solid fa-user"></i> <i
+                                    class="fa-solid fa-sort-down"></i></button>
+                        </li>
+                    </div>
+                    <div class="user-select">
+                        <ul class="user-options">
+                            <li class="header-nav"><button class="nav-btn"><i
+                                        class="fa-solid fa-right-to-bracket"></i>Login</button>
+                            </li><!--criar alteração para perfil pós logado-->
+
+                            <li><button class="user-item"><i class="fa-solid fa-user"></i> Configurations</button>
+                            </li>
+
+                            <li><button class="user-item"><i class="fa-solid fa-user"></i> Costumer Service</button>
+                            </li>
+
+                            <li><button class="user-item"><i
+                                        class="fa-solid fa-right-to-bracket fa-flip-horizontal"></i>Logout</button>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </section>
         <div class="search-bar">
             <input class="search-line" type="search" placeholder="search">
             <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
