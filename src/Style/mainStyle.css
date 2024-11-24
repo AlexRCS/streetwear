@@ -1,8 +1,12 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #f6f8fc;
 }
 
-
+main{
+    background-color: #ffffff;
+    width: 100vw;
+}

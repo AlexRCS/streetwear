@@ -10,29 +10,34 @@
     <link rel="stylesheet" href="./src/Style/mainStyle.css">
     <link rel="stylesheet" href="./src/Style/reset.css">
     <link rel="stylesheet" href="./src/Style/mainHeader.css">
+    <link rel="stylesheet" href="./src/Style/mainNav.css">
     <title>Streetwear-shop</title>
 </head>
 
 <body>
     <header>
         <section class="header-top">
-            <h1>Streetwear-shop</h1>
+            <a href="index.html">
+                <h1>Streetwear-shop</h1>
+            </a>
             <div class="side-user-options">
-                <div class="color-mode">
-                    <i class="fa-solid fa-palette"></i>
-                    <select>
-                        <!--criar alteração para modo claro/escruro-->
-                        <option value="ligth">Light</option>
-                        <option value="dark">Dark</option>
-                    </select>
-                </div>
                 <ul class="side-navigation">
                     <div class="main-options">
-                        <li class="header-nav"><button class="nav-btn"><i class="fa-solid fa-cart-shopping"></i> <i
+                        <li class="color-mode">
+                            <button id="color-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                            <!-- criar classe dark no <i> -->
+                        </li>
+                        <div class="color-select">
+                            <ul class="color-options"></ul>
+                            <li class="color-item">Light</li>
+                            <li class="color-item">Dark</li>
+                        </div>
+
+                        <li class="header-nav"><button class="nav-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i> <i
                                     class="fa-solid fa-sort-down"></i></button>
                         </li><!--não permitir finalizar sem logar-->
 
-                        <li class="header-nav"><button class="profile-btn"><i class="fa-solid fa-user"></i> <i
+                        <li class="header-nav"><button class="nav-btn" id="profile-btn"><i class="fa-solid fa-user"></i> <i
                                     class="fa-solid fa-sort-down"></i></button>
                         </li>
                     </div>
@@ -70,9 +75,9 @@
     </nav>
     <main>
         <section class="banner-carousel">
-            <img src="./src/images/banners/1.webp" content-id="banner1" alt="banner" width="100%" height="550px">
-            <img src="./src/images/banners/2.webp" content-id="banner1" alt="banner" width="100%" height="550px">
-            <img src="./src/images/banners/3.webp" content-id="banner1" alt="banner" width="100%" height="550px">
+            <img src="./src/images/banners/1.webp" content-id="banner1" alt="banner" width="95%" height="550px">
+            <img src="./src/images/banners/2.webp" content-id="banner1" alt="banner" width="95%" height="550px">
+            <img src="./src/images/banners/3.webp" content-id="banner1" alt="banner" width="95%" height="550px">
         </section>
 
         <section class="main-products">

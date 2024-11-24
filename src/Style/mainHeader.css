@@ -9,8 +9,13 @@ header {
 }
 
 header h1 {
+    color: #000000;
     width: max-content;
     font-size: 50px;
+}
+
+button{
+    cursor: pointer;
 }
 
 .header-top {
@@ -20,30 +25,66 @@ header h1 {
     align-items: center;
 }
 
-.main-options{
+.main-options {
     display: flex;
     gap: 30px;
+
 }
 
-.fa-solid.fa-sort-down{
+.main-options button {
+    transition: all 0.1s ease;
+}
+
+.main-options .nav-btn:hover {
+    font-size: 25px;
+    color: #6b6b6b;
+}
+
+.fa-solid.fa-sort-down {
     font-size: 16px;
+    transition: transform 0.5s ease;
+}
+
+.main-options button .fa-solid.fa-sort-down .active {
+    transform: rotate(180deg);
+}
+
+.main-options #color-btn {
+    font-size: 18px;
+}
+
+.fa-circle-half-stroke {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+.fa-circle-half-stroke:hover {
+    transform: rotate(90deg);
+}
+
+.fa-circle-half-stroke.dark {
+    transform: rotate(360deg);
 }
 
 
+.color-select {
+    display: none;
+}
 
 
-.main-options,button{
-background-color: transparent;
-border: none;
-font-size: 26px;
+.main-options button {
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+
 }
 
 .side-user-options {
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 
-.user-select{
+.user-select {
     display: none;
 }
 
@@ -53,10 +94,8 @@ font-size: 26px;
 
 .side-navigation {
     width: max-content;
-    
+
 }
-
-
 
 /* search bar */
 
@@ -98,4 +137,8 @@ font-size: 26px;
 
 .search-icon:hover {
     font-size: 26px;
+}
+
+.search-line::placeholder{
+    padding-left: 10px;
 }
