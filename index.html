@@ -48,6 +48,8 @@
                                         class="fa-solid fa-right-to-bracket"></i>Login</button>
                             </li><!--criar alteração para perfil pós logado-->
 
+                            <li><button class="user-item"><i class="fa-solid fa-star"></i> favorites</button></li>
+
                             <li><button class="user-item"><i class="fa-solid fa-user"></i> Configurations</button>
                             </li>
 
@@ -76,11 +78,9 @@
     </nav>
     <main>
         <section class="banner-carousel">
-            <img src="./src/images/banners/2.webp" content-id="banner1" alt="banner">
-            <div class="banner-container">
-                <button class="banner-arrow" id="left-banner-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="banner-arrow" id="right-banner-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+            <img src="https://placehold.co/1350x600" content-id="banner1" alt="banner">
+            <button class="banner-arrow" id="left-banner-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="banner-arrow" id="right-banner-btn"><i class="fa-solid fa-chevron-right"></i></button>
             <div class="banner-calc">
                 <i id="calc-1" class="fa-solid fa-circle-dot"></i>
                 <i id="calc-2" class="fa-solid fa-circle"></i>
@@ -93,14 +93,14 @@
 
         <section class="favorite-container">
             <div class="favorite-product" id="1">
-                <img src="./src/images/mainProducts/1.png" alt="main product 1">
+                <img src="https://placehold.co/700x700" alt="main product 1">
                 <div class="favorite-content">
                     <h2 class="favorite-title">Product name</h2>
                     <button class="favorite-order">Order now</button>
                 </div>
             </div>
             <div class="favorite-product" id="2">
-                <img src="./src/images/mainProducts/2.png" alt="main-product 2">
+                <img src="https://placehold.co/700x700" alt="main-product 2">
                 <div class="favorite-content">
                     <h2 class="favorite-title">Product name</h2>
                     <button class="favorite-order">Order now</button>
@@ -108,69 +108,155 @@
             </div>
         </section>
 
-        <section class="products">
-            <div class="product-box" id="product-1">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images">
-                <div class="product-content">
-                    <button class="favorite"><i class="fa-solid fa-star"></i></button>
-                    <button class="left-img-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="right-img-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                    <button class="mainPage-buyBtn"><i class="fa-solid fa-bag-shopping"></i> Order Now</button>
+        <section class="products" id="best-seller">
+            <h3 class="products-title">Best sellers</h3>
+            <div class="products-container">
+                <div class="product-box" id="product-1">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
                 </div>
-                <p class="product-name">Product Name</p>
-                <p class="price">$XX,XX</p>
-            </div>
 
-            <div class="product-box" id="product-2">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images">
-                <div class="product-content">
-                    <button class="favorite"><i class="fa-solid fa-star"></i></button>
-
-                    <button class="left-img-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="right-img-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                    <button class="mainPage-buyBtn"><i class="fa-solid fa-bag-shopping"></i> Order Now</button>
+                <div class="product-box" id="product-2">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
                 </div>
-                <p class="product-name">Product Name</p>
-                <p class="price">$XX,XX</p>
-            </div>
 
-            <div class="product-box" id="product-3">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images">
-                <div class="product-content">
-                    <button class="favorite"><i class="fa-solid fa-star"></i></button>
-                    <button class="left-img-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="right-img-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                    <button class="mainPage-buyBtn"><i class="fa-solid fa-bag-shopping"></i> Order Now</button>
+                <div class="product-box" id="product-3">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
                 </div>
-                <p class="product-name">Product Name</p>
-                <p class="price">$XX,XX</p>
-            </div>
 
-            <div class="product-box" id="product-4">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images">
-                <div class="product-content">
-                    <button class="favorite"><i class="fa-solid fa-star"></i></button>
-                    <button class="left-img-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="right-img-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                    <button class="mainPage-buyBtn"><i class="fa-solid fa-bag-shopping"></i> Order Now</button>
+                <div class="product-box" id="product-4">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
                 </div>
-                <p class="product-name">Product Name</p>
-                <p class="price">$XX,XX</p>
-            </div>
 
-            <div class="product-box" id="product-5">
-                <img class="product-img" src="./src/images/mainPageProducts/id1/1.webp" alt="products images">
-                <div class="product-content">
-                    <button class="favorite"><i class="fa-solid fa-star"></i></button>
-                    <button class="left-img-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="right-img-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                    <button class="mainPage-buyBtn"><i class="fa-solid fa-bag-shopping"></i> Order Now</button>
+                <div class="product-box" id="product-5">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
                 </div>
-                <p class="product-name">Product Name</p>
-                <p class="price">$XX,XX</p>
             </div>
         </section>
 
+        <section class="products" id="discount">
+            <h3 class="products-title">Discounts</h3>
+            <div class="products-container">
+                <div class="product-box" id="product-1">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+
+                <div class="product-box" id="product-2">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+
+                <div class="product-box" id="product-3">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+
+                <div class="product-box" id="product-4">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+
+                <div class="product-box" id="product-5">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="random-products">
+            <h3 class="products-title">Best sellers</h3>
+            <div class="products-container">
+                <div class="product-box" id="product-1">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+
+                <div class="product-box" id="product-2">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+
+                <div class="product-box" id="product-3">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+
+                <div class="product-box" id="product-4">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+
+                <div class="product-box" id="product-5">
+                    <div class="product-content">
+                        <img class="product-img" src="https://placehold.co/280x280" alt="products images">
+                        <button class="favorite"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <p class="product-name">Product Name</p>
+                    <p class="price">$XXX,XX</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer-nav">
