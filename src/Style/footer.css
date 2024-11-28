@@ -14,11 +14,19 @@ footer article{
     margin: 10px 30px;
 }
 
+a{
+    color: inherit;
+}
+
 .footer-nav {
     display: flex;
     justify-content: flex-start;
     gap: 100px;
     width: 100vw;
+}
+
+.footer-item:hover{
+    text-decoration: underline;
 }
 
 .social-media {

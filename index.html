@@ -24,43 +24,40 @@
             <div class="side-user-options">
                 <ul class="side-navigation">
                     <div class="main-options">
-                        <li class="color-mode">
-                            <button id="color-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                        <li class="theme-mode">
+                            <button id="theme-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
                             <!-- criar classe dark no <i> -->
                         </li>
-                        <div class="color-select">
-                            <ul class="color-options"></ul>
-                            <li class="color-item">Light</li>
-                            <li class="color-item">Dark</li>
-                        </div>
-
                         <li class="header-nav"><button class="nav-btn" id="cart-btn"><i
                                     class="fa-solid fa-cart-shopping"></i> <i
                                     class="fa-solid fa-sort-down"></i></button>
                         </li><!--não permitir finalizar sem logar-->
 
-                        <li class="header-nav"><button class="nav-btn" id="profile-btn"><i class="fa-solid fa-user"></i>
-                                <i class="fa-solid fa-sort-down"></i></button>
-                        </li>
-                    </div>
-                    <div class="user-select">
-                        <ul class="user-options">
-                            <li class="header-nav"><button class="nav-btn"><i
-                                        class="fa-solid fa-right-to-bracket"></i>Login</button>
-                            </li><!--criar alteração para perfil pós logado-->
-
-                            <li><button class="user-item"><i class="fa-solid fa-star"></i> favorites</button></li>
-
-                            <li><button class="user-item"><i class="fa-solid fa-user"></i> Configurations</button>
+                        <div class="user-container">
+                            <li class="header-nav"><button class="nav-btn" id="profile-btn"><i
+                                        class="fa-solid fa-user"></i>
+                                    <i class="fa-solid fa-sort-down"></i></button>
                             </li>
+                            <ul class="profile-options">
+                                <li><button><i class="fa-solid fa-right-to-bracket"></i>Login</button>
+                                </li><!--criar alteração para perfil pós logado-->
 
-                            <li><button class="user-item"><i class="fa-solid fa-user"></i> Costumer Service</button>
-                            </li>
+                                <li><button><i class="fa-solid fa-star"></i> favorites</button>
+                                </li>
 
-                            <li><button class="user-item"><i
-                                        class="fa-solid fa-right-to-bracket fa-flip-horizontal"></i>Logout</button>
-                            </li>
-                        </ul>
+                                <li><button><i class="fa-solid fa-user"></i>
+                                        Configurations</button>
+                                </li>
+
+                                <li><button><i class="fa-solid fa-user"></i> Costumer
+                                        Service</button>
+                                </li>
+
+                                <li><button><i
+                                            class="fa-solid fa-right-to-bracket fa-flip-horizontal"></i>Logout</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </ul>
             </div>
@@ -285,7 +282,7 @@
                 <li class="footer-item"><a href="">Women</a></li>
                 <li class="footer-item"><a href="">Kids</a></li>
             </ul>
-        </div>  
+        </div>
         <article>
             <h4>
                 site experimental realizado com HTML CSS3 JavaScript
@@ -298,6 +295,7 @@
             <li class="media-icon"><a href="https://github.com"><i class="fa-brands fa-github"></i></a></li>
         </ul>
     </footer>
+    <script src="./src/index.js/index.js"></script>
 </body>
 
 </html>

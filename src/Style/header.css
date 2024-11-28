@@ -49,28 +49,21 @@ button{
     transform: rotate(180deg);
 }
 
-.main-options #color-btn {
+.main-options #theme-btn {
     font-size: 18px;
 }
 
 .fa-circle-half-stroke {
-    transform: rotate(180deg);
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 
-.fa-circle-half-stroke:hover {
+/* .fa-circle-half-stroke:hover {
     transform: rotate(90deg);
-}
+} */
 
 .fa-circle-half-stroke.dark {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
 }
-
-
-.color-select {
-    display: none;
-}
-
 
 .main-options button {
     background-color: transparent;
@@ -84,9 +77,20 @@ button{
     gap: 18px;
 }
 
-.user-select {
-    display: none;
+.profile-container{
+     
 }
+
+.profile-options {
+    position: absolute;
+    background-color: aqua;
+}
+
+.profile-options button{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
 
 .color-mode {
     width: max-content;
