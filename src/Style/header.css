@@ -14,7 +14,7 @@ header h1 {
     font-size: 50px;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
@@ -23,12 +23,15 @@ button{
     width: 96vw;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .main-options {
     display: flex;
+    min-width: max-content;
     gap: 30px;
-
+    width: fit-content;
+    position: relative;
 }
 
 .main-options button {
@@ -57,10 +60,6 @@ button{
     transition: transform 1s ease;
 }
 
-/* .fa-circle-half-stroke:hover {
-    transform: rotate(90deg);
-} */
-
 .fa-circle-half-stroke.dark {
     transform: rotate(180deg);
 }
@@ -72,33 +71,40 @@ button{
 
 }
 
-.side-user-options {
+.profile-options{
     display: flex;
-    gap: 18px;
-}
-
-.profile-container{
-     
-}
-
-.profile-options {
+    flex-direction: column;
+    z-index: 1;
+    padding: 5px;
     position: absolute;
-    background-color: aqua;
+    background-color: #f7f3f3;
+    height: 0;
+    width:250px;
+    margin-top: 50px;
+    right: 0;
+    border: hidden;
+    border-radius: 20px 0px 20px;
+    box-shadow: 0 7px 20px -3px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+}
+
+.profile-options.open{
+    height: min-content;
 }
 
 .profile-options button{
-    margin-top: 10px;
-    font-size: 15px;
+    font-size: 0;
 }
 
-
-.color-mode {
-    width: max-content;
+.profile-item.show {
+    margin: 10px 5px 20px;
+    font-size: 18px;
+    transition: all 0.5s ease;
 }
 
-.side-navigation {
-    width: max-content;
-
+.profile-item.show:hover{
+    font-size: 17.5px;
+    color: #6b6b6b;
 }
 
 /* search bar */
@@ -143,6 +149,6 @@ button{
     font-size: 26px;
 }
 
-.search-line::placeholder{
+.search-line::placeholder {
     padding-left: 10px;
 }
