@@ -42,13 +42,23 @@ let currentBanner = 1;
 function changeBanner(newBanner) {
     const banner = document.querySelector('.banner-img')
     banner.src = `https://placehold.co/600x400?text=Banner${newBanner}`;
+    // viewBanner = banner.src - (1);
     currentBanner = newBanner
     changeBannerCounter(newBanner);
     resetInterval(interval);
+    console.log(viewBanner);
 }
 function changeBannerCounter(newBanner) {
     const currentCounter = document.querySelector('.fa-circle-dot')
     const newCounter = document.getElementById(`calc-${newBanner}`)
+    const allCounters = document.querySelectorAll('.banner-calc i')
+
+    allCounters.forEach((counter, element) => {
+        counter.addEventListener('click', () => {
+            if (element + 1 !== currentCounter)
+                changeBanner(element + 1)
+        });
+    });
 
     if (currentCounter) {
         currentCounter.classList.remove('fa-circle-dot');
@@ -59,6 +69,7 @@ function changeBannerCounter(newBanner) {
         newCounter.classList.add('fa-circle-dot');
     }
 }
+
 
 const rightBannerBtn = document.querySelector('#right-banner-btn');
 const leftBannerBtn = document.querySelector('#left-banner-btn');
@@ -73,6 +84,8 @@ leftBannerBtn.addEventListener('click', function () {
     changeBanner(newBanner);
 })
 
+//Acho que se eu criar uma Async para fazer ele carregar a imagem que vai e a que está 
+//e só depois fazer a transição dá certo.
 
 
 
