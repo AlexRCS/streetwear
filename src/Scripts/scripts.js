@@ -40,14 +40,25 @@ profileBtn.addEventListener('click', () => {
 let currentBanner = 1;
 
 function changeBanner(newBanner) {
-    const banner = document.querySelector('.banner-img')
+    const lastBanner = document.querySelector('.last-banner');
+    const nextBanner = document.querySelector('.next-banner');
+    const banner = document.querySelector('.current-banner');
+    
+    const last = newBanner - 1 < 1 ? 6 : newBanner - 1;
+    const next = newBanner + 1 > 6 ? 1 : newBanner + 1;
+    
     banner.src = `https://placehold.co/600x400?text=Banner${newBanner}`;
-    // viewBanner = banner.src - (1);
-    currentBanner = newBanner
+    lastBanner.src = `https://placehold.co/600x400?text=Banner${last}`;
+    nextBanner.src = `https://placehold.co/600x400?text=Banner${next}`;
+
+    currentBanner = newBanner;
+
     changeBannerCounter(newBanner);
     resetInterval(interval);
-    console.log(viewBanner);
 }
+
+
+
 function changeBannerCounter(newBanner) {
     const currentCounter = document.querySelector('.fa-circle-dot')
     const newCounter = document.getElementById(`calc-${newBanner}`)
@@ -83,10 +94,6 @@ leftBannerBtn.addEventListener('click', function () {
     let newBanner = currentBanner > 1 ? currentBanner - 1 : 6;
     changeBanner(newBanner);
 })
-
-//Acho que se eu criar uma Async para fazer ele carregar a imagem que vai e a que está 
-//e só depois fazer a transição dá certo.
-
 
 
 function bannerInterval() {
