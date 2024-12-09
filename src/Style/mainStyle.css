@@ -18,7 +18,7 @@ main {
 }
 
 /* banner section */
-.banner-carousel {
+.banner-carousel{
     display: flex;
     position: relative;
     justify-content: center;
@@ -27,15 +27,39 @@ main {
     height: 600px;
 }
 
+
 .banner-carousel img {
     width: 100vw;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.5s ease;
+    transition: transform 0.8s ease, opacity 1s ease;
+    z-index: 1;
 }
 
-.banner-carousel img:hover {
-    opacity: 0.90;
+
+.banner-carousel img.slide-out-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 0;
+}
+
+.banner-carousel img.slide-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+    animation: fadeIn 0.2s ease forwards;
+}
+
+.banner-carousel img.slide-out-right {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 0;
+}
+
+.banner-carousel img.slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1;
 }
 
 .banner-arrow {
@@ -56,11 +80,13 @@ main {
 #right-banner-btn {
     position: absolute;
     right: 0;
+    z-index: 2;
 }
 
 #left-banner-btn {
     position: absolute;
     left: 0;
+    z-index: 2;
 }
 
 .banner-calc {
@@ -81,8 +107,6 @@ main {
     color: rgba(0, 0, 0, 0.7);
     font-size: 9px;
 }
-
-
 
 /* favorites section */
 
