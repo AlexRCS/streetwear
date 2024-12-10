@@ -37,77 +37,96 @@ profileBtn.addEventListener('click', () => {
 
 // BANNER CHANGE
 
-    let currentBanner = 1;
-    let interval;
+let currentBanner = 1;
+let interval;
 
-    function changeBanner(newBanner, direction = 'right') {
-        const banner = document.querySelector('.banner');
-        // const bannerContainer = document.querySelector('.banner-carousel');
+function changeBanner(newBanner, direction = 'right') {
+    const banner = document.querySelector('.banner');
+
+    if (direction === 'right') {
+        banner.classList.add('slide-out-left');
+    } else {
+        banner.classList.add('slide-out-right');
+    }
+
+    setTimeout(() => {
+        banner.src = `https://placehold.co/600x400?text=Banner${newBanner}`
+        banner.classList.remove('slide-out-left', 'slide-out-right');
 
         if (direction === 'right') {
-            banner.classList.add('slide-out-left');
+            banner.classList.add('slide-in-right');
         } else {
-            banner.classList.add('slide-out-right');
+            banner.classList.add('slide-in-left');
         }
-
         setTimeout(() => {
-            banner.src = `https://placehold.co/600x400?text=Banner${newBanner}`
-            banner.classList.remove('slide-out-left', 'slide-out-right');
+            banner.classList.remove('slide-in-right', 'slide-in-left');
+        }, 200);
 
-            if (direction === 'right') {
-                banner.classList.add('slide-in-right');
-            } else {
-                banner.classList.add('slide-in-left');
+        currentBanner = newBanner;
+        autoBannerCounter(newBanner);
+        resetInterval(interval);
+    }, 200);
+}
+
+function clickBannerCounter(){
+    const allCounters = document.querySelectorAll('.banner-calc i');
+
+    allCounters.forEach((counter, index) => {
+        counter.addEventListener('click', () => {
+            if (index + 1 !== currentBanner) {
+                changeBanner(index + 1);
             }
-            setTimeout(() => {
-                banner.classList.remove('slide-in-right', 'slide-in-left');
-            }, 500);
+        });
+    });
+}
 
-            currentBanner = newBanner;
-            changeBannerCounter(newBanner);
-            resetInterval(interval);
-        }, 500);
+
+function autoBannerCounter(newBanner) {
+    const currentCounter = document.querySelector('.fa-circle-dot')
+    const newCounter = document.getElementById(`calc-${newBanner}`)
+    
+    if (currentCounter) {
+        currentCounter.classList.remove('fa-circle-dot');
+        currentCounter.classList.add('fa-circle');
     }
+    if (newCounter) {
+        newCounter.classList.remove('fa-circle');
+        newCounter.classList.add('fa-circle-dot');
 
-    function changeBannerCounter(newBanner) {
-        const currentCounter = document.querySelector('.fa-circle-dot')
-        const newCounter = document.getElementById(`calc-${newBanner}`)
-
-        if (currentCounter) {
-            currentCounter.classList.remove('fa-circle-dot');
-            currentCounter.classList.add('fa-circle');
-        }
-        if (newCounter) {
-            newCounter.classList.remove('fa-circle');
-            newCounter.classList.add('fa-circle-dot');
-        }
+        const counterContainer = document.querySelector('.banner-calc');
+        counterContainer.classList.add('active')
+        setTimeout(() => {
+            counterContainer.classList.remove('active')
+        }, 1000)
     }
+}
 
 
+const rightBannerBtn = document.querySelector('#right-banner-btn');
+const leftBannerBtn = document.querySelector('#left-banner-btn');
 
-    const rightBannerBtn = document.querySelector('#right-banner-btn');
-    const leftBannerBtn = document.querySelector('#left-banner-btn');
 
-    rightBannerBtn.addEventListener('click', function () {
+rightBannerBtn.addEventListener('click', function () {
+    let newBanner = currentBanner < 6 ? currentBanner + 1 : 1;
+    changeBanner(newBanner, 'right');
+});
+
+leftBannerBtn.addEventListener('click', function () {
+    let newBanner = currentBanner > 1 ? currentBanner - 1 : 6;
+    changeBanner(newBanner, 'left');
+});
+
+
+function bannerInterval() {
+    interval = setInterval(function () {
         let newBanner = currentBanner < 6 ? currentBanner + 1 : 1;
         changeBanner(newBanner, 'right');
-    });
+    }, 6000);
+}
 
-    leftBannerBtn.addEventListener('click', function () {
-        let newBanner = currentBanner > 1 ? currentBanner - 1 : 6;
-        changeBanner(newBanner, 'left');
-    });
-
-
-    function bannerInterval() {
-        interval = setInterval(function () {
-            let newBanner = currentBanner < 6 ? currentBanner + 1 : 1;
-            changeBanner(newBanner, 'right');
-        }, 6000);
-    }
-
-    function resetInterval() {
-        clearInterval(interval);
-        bannerInterval();
-    }
+function resetInterval() {
+    clearInterval(interval);
     bannerInterval();
+}
+bannerInterval();
+clickBannerCounter();
