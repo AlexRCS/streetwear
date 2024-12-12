@@ -130,3 +130,17 @@ function resetInterval() {
 }
 bannerInterval();
 clickBannerCounter();
+
+
+//PRODUCTS GALERY
+
+let productId = 1;
+
+const productContainer = document.querySelectorAll('.product-container')
+const product = document.querySelector(`#product-${productId}`)
+
+const rightProductBtn = document.querySelector('#right-product-btn');
+const leftProductBtn = document.querySelector('#left-product-btn');
+
+
+
